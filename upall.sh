@@ -1,4 +1,9 @@
 #!/usr/bin/sudo bash
+# A shell script to update all packages (APT, Flatpak & Snap) on Debian-based systems.
+# 
+# Author: Abdallah Abdelazim
+# License: GNU General Public License v3.0
+#
 
 # [1] apt
 echo -e "--> Updating APT packages:"
