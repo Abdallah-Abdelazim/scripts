@@ -12,13 +12,13 @@ NC='\033[0m' # No color
 
 # [1] apt
 echo -e "${LIGHT_BLUE}Updating APT packages:${NC}"
-sudo apt update && sudo apt upgrade
+apt update && apt upgrade
 echo -e "${GREEN}Done.${NC}\n"
 echo -e "${LIGHT_BLUE}Executing 'apt clean':${NC}"
-sudo apt clean
+apt clean
 echo -e "${GREEN}Done.${NC}\n"
 echo -e "${LIGHT_BLUE}Executing 'apt autoremove':${NC}"
-sudo apt autoremove
+apt autoremove
 echo -e "${GREEN}Done.${NC}\n"
 
 # [2] flatpak
@@ -28,7 +28,7 @@ echo -e "${GREEN}Done.${NC}\n"
 
 # [3] snap
 echo -e "${LIGHT_BLUE}Updating Snaps:${NC}"
-sudo snap refresh
+snap refresh
 echo -e "${GREEN}Done.${NC}\n"
 
 
