@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 # A shell script to resize icon images and generate the alternative drawables with the proper screen pixel densities (dip) for Android.
 # The passed icon image would be the xxxhdpi drawable & the other drawables (xxhdpi, xhdpi, hdpi & mdpi) would be scaled down from that.
 # How to use:
