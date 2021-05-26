@@ -1,1 +1,1 @@
-### Misc. scripts (Bash, Python, ...)
+**Misc. scripts (Bash, Python, ...)**
