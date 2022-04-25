@@ -14,26 +14,26 @@ NC='\033[0m' # No color
 # request root permission if not root
 [ "$UID" -eq 0 ] || exec sudo "$0" "$@"
 
-# [1] apt
+# [1] APT
 echo -e "${LIGHT_BLUE}Updating APT packages:${NC}"
 sudo apt update && sudo apt upgrade
-echo -e "${GREEN}Done.${NC}\n"
-echo -e "${LIGHT_BLUE}Executing 'apt clean':${NC}"
-sudo apt clean
-echo -e "${GREEN}Done.${NC}\n"
-echo -e "${LIGHT_BLUE}Executing 'apt autoremove':${NC}"
+echo -e "${GREEN} -> Done${NC}\n"
+echo -e "${LIGHT_BLUE}Removing orphans.. Executing 'apt autoremove':${NC}"
 sudo apt autoremove
-echo -e "${GREEN}Done.${NC}\n"
+echo -e "${GREEN} -> Done${NC}\n"
+echo -e "${LIGHT_BLUE}Cleaning.. Executing 'apt clean':${NC}"
+sudo apt clean
+echo -e "${GREEN} -> Done${NC}\n"
 
 # [2] flatpak
 echo -e "${LIGHT_BLUE}Updating Flatpaks:${NC}"
 flatpak update
-echo -e "${GREEN}Done.${NC}\n"
+echo -e "${GREEN} -> Done${NC}\n"
 
 # [3] snap
 echo -e "${LIGHT_BLUE}Updating Snaps:${NC}"
 sudo snap refresh
-echo -e "${GREEN}Done.${NC}\n"
+echo -e "${GREEN} -> Done${NC}\n"
 
 
 echo -e "\a${DARK_GREY}UPALL update script finished.${NC}"
