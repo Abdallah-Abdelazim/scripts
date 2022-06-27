@@ -17,23 +17,23 @@ NC='\033[0m' # No color
 # [1] Pacman & AUR
 echo -e "${LIGHT_BLUE}Updating Pacman & AUR packages:${NC}"
 sudo -u $(logname) yay
-echo -e "${GREEN} -> Done${NC}\n"
+echo -e "${GREEN} -> Finished${NC}\n"
 echo -e "${LIGHT_BLUE}Removing orphans.. Executing 'pacman -Qtdq | pacman -Rns -':${NC}"
 sudo pacman -Qtdq | sudo pacman -Rns -
-echo -e "${GREEN} -> Done${NC}\n"
+echo -e "${GREEN} -> Finished${NC}\n"
 echo -e "${LIGHT_BLUE}Cleaning.. Executing 'pacman -Sc && yay -c':${NC}"
 sudo pacman -Sc --noconfirm && sudo -u $(logname) yay -c
-echo -e "${GREEN} -> Done${NC}\n"
+echo -e "${GREEN} -> Finished${NC}\n"
 
 # [2] flatpak
 echo -e "${LIGHT_BLUE}Updating Flatpaks:${NC}"
 flatpak update
-echo -e "${GREEN} -> Done${NC}\n"
+echo -e "${GREEN} -> Finished${NC}\n"
 
 # [3] snap
 echo -e "${LIGHT_BLUE}Updating Snaps:${NC}"
 sudo snap refresh
-echo -e "${GREEN} -> Done${NC}\n"
+echo -e "${GREEN} -> Finished${NC}\n"
 
 
 echo -e "\a${DARK_GREY}UPALL update script finished.${NC}"
