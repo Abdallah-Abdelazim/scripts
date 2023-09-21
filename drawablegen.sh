@@ -7,7 +7,7 @@
 #   ./drawablegen.sh my_image.png
 # This will create all the drawable folders, if not have already, in a res folder inside the current directory (as returned by pwd).
 # Use only with PNG images.
-# Requires ImageMagick, install with: sudo apt install imagemagick
+# Requires ImageMagick, install with: (Ubuntu: sudo apt install imagemagick) or (macOS: brew install imagemagick)
 # 
 # Author: Abdallah Abdelazim
 # Author: Kishan Vaghela
